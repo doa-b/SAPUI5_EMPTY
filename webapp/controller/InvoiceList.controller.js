@@ -29,6 +29,17 @@ sap.ui.define([
             const oList = this.byId("invoiceList");
             const oBinding = oList.getBinding("items");
             oBinding.filter(aFilter);
+        },
+
+        onPress: function(oEvent) {
+            const oItem = oEvent.getSource();
+            console.log(oItem);
+            const path = oItem.getBindingContext("invoice").getPath().substr(1);
+            console.log(path);
+            const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+            oRouter.navTo("detail", {
+                invoicePath: window.encodeURIComponent(path)
+            })
         }
     });
 });
