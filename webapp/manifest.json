@@ -38,6 +38,10 @@
       "minUI5Version": "1.60",
       "libs": {
         "sap.m": {}
+      },
+      "contentDensities": {
+        "compact": true,
+        "cozy": true
       }
     },
     "models": {
@@ -45,12 +49,14 @@
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
           "bundleName": "sap.ui.demo.walkthrough.i18n.i18n",
-          "supportedLocales": [""],
+          "supportedLocales": [
+            ""
+          ],
           "fallbackLocale": ""
         }
       },
       "invoice": {
-       "dataSource": "invoiceRemote"
+        "dataSource": "invoiceRemote"
       }
     },
     "routing": {
@@ -86,7 +92,11 @@
       }
     },
     "resources": {
-      "css": [{"uri":  "css/style.css"}]
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
     }
   }
 }
