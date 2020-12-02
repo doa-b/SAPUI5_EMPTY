@@ -6,7 +6,8 @@
            class="sapUiResponsiveMargin"
            width="auto"
            expandable="{device>/system/phone}"
-           expanded="{= !${device>/system/phone} }">
+           expanded="{= !${device>/system/phone} }"
+           accessibleRole="Region">
         <Button
                 id="helloDialogButton"
                 icon="sap-icon://world"
