@@ -3,6 +3,7 @@
         xmlns="sap.m"
         xmlns:mvc="sap.ui.core.mvc"
         xmlns:wt="sap.ui.demo.walkthrough.control"
+        xmlns:fc="sap.ui.demo.walkthrough.doa-component"
        >
     <Page
             title="{i18n>detailPageTitle}"
@@ -34,5 +35,6 @@
             </attributes>
         </ObjectHeader>
         <wt:ProductRating id="rating" class="sapUiSmallMarginBeginEnd" change="onRatingChange"/>
+        <fc:DoaComponent placeholder="{/placeholder}" search="onDoaSearch" buttonText="{/searchText}"></fc:DoaComponent>
     </Page>
 </mvc:View>

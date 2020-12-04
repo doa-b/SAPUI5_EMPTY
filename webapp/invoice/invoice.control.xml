@@ -1,0 +1,17 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:layout="sap.ui.layout">
+        <HBox class="sapUiTinyMargin" press="handleboxpress">
+            <Label text="your custom list item from: "/>
+            <Label text="{$this>invoice>ProductName}"/>
+            <Label text="{$this>invoice>ExtendedPrice}"/>
+        <Button text="PRESS ME" press="handleSearch">
+            <customData>
+                <!-- dynamic binded data from OData model -->
+                <core:CustomData
+                        key="data"
+                        value="{name: $this>invoice>ProductName}">
+                </core:CustomData>
+            </customData>
+        </Button>
+        </HBox>
+
+</core:FragmentDefinition>

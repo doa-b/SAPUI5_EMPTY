@@ -14,6 +14,14 @@ sap.ui.define([
             });
             this.getView().setModel(oViewModel, "view");
 
+            // set data model for DoaComponent
+            var oData = {
+                placeholder: "Doa's placeholder ...",
+                searchText: "Doa's button text ..."
+            };
+            var oModel = new JSONModel(oData);
+            this.getView().setModel(oModel);
+
 
             const oRouter = UIComponent.getRouterFor(this);
             oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
@@ -35,6 +43,11 @@ sap.ui.define([
                 const oRouter = UIComponent.getRouterFor(this);
                 oRouter.navTo("overview", {}, true);
             }
+        },
+
+        onDoaSearch: function (oEvent) {
+            var sValue = oEvent.getParameter("value") || "<empty search term>";
+            MessageToast.show("Button pressed: " + sValue);
         },
 
         onRatingChange: function (oEvent) {
