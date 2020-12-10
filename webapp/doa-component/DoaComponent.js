@@ -3,7 +3,7 @@ sap.ui.define(['sap/ui/core/XMLComposite'], function(XMLComposite) {
     var oSearchField = XMLComposite.extend("sap.ui.demo.walkthrough.doa-component.DoaComponent", {
         metadata: {
             properties: {
-                placeholder: { type: "object", defaultValue: "Enter Search Term..." },
+                placeholder: { type: "string", defaultValue: "Enter Search Term..." },
                 buttonText: { type: "string", defaultValue: "Search" }
             },
             events: {
